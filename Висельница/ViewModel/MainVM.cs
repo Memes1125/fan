@@ -12,12 +12,14 @@ namespace Висельница.ViewModel
         public string CurrentImage { get; set; }
         public Model.Char[] TryWord { get; set; }
         public MvvmCommand CommandTry { get; set; }
+        public MvvmCommand CommandStart { get; set; }
 
         public MainVM()
         {
             game = new Game();
             TryWord = game.GetStartWord();
-            CommandTry = new MvvmCommand(() => game.TryWord(TryWord), () => true);
+            CommandTry = new MvvmCommand(() => game.TryWord(TryWord), () => game.Status);
+            CommandStart = new MvvmCommand(() => game.StartGame(), () => !game.Status);
             game.ImageChanged += Game_ImageChanged;
             game.WordStatusChanged += Game_WordStatusChanged;
         }
