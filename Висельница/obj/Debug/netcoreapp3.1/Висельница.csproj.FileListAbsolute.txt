@@ -1,0 +1,5 @@
+C:\Users\pokim\source\repos\Висельница\Висельница\obj\Debug\netcoreapp3.1\Висельница.csprojAssemblyReference.cache
+C:\Users\pokim\source\repos\Висельница\Висельница\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\pokim\source\repos\Висельница\Висельница\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\pokim\source\repos\Висельница\Висельница\obj\Debug\netcoreapp3.1\Висельница_MarkupCompile.cache
+C:\Users\pokim\source\repos\Висельница\Висельница\obj\Debug\netcoreapp3.1\Висельница_MarkupCompile.lref
