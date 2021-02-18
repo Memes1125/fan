@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="depositphotos_190272036-stock-illustration-tetrad-cell-notebook-cage-vector.jpg" />
     <None Remove="Hangman\Hangman-0.png" />
     <None Remove="Hangman\Hangman-1.png" />
     <None Remove="Hangman\Hangman-2.png" />
@@ -23,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="depositphotos_190272036-stock-illustration-tetrad-cell-notebook-cage-vector.jpg" />
     <Resource Include="Hangman\Hangman-0.png" />
     <Resource Include="Hangman\Hangman-1.png" />
     <Resource Include="Hangman\Hangman-2.png" />

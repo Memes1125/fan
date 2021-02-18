@@ -6,16 +6,23 @@
         xmlns:local="clr-namespace:Висельница"
         xmlns:vm="clr-namespace:Висельница.ViewModel"
         mc:Ignorable="d"
-        Title="Висельница" Height="450" Width="800">
+        Title="Висельица" Height="450" Width="800">
     <Window.Resources>
         <DataTemplate x:Key="characterBox" DataType="ListBoxItem">
             <TextBox Text="{Binding Character}" Padding="5" FontSize="15" IsEnabled="{Binding Unknown}"/>
         </DataTemplate>
+        <Storyboard x:Key="Storyboard1"/>
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/depositphotos_190272036-stock-illustration-tetrad-cell-notebook-cage-vector.jpg"/>
+    </Window.Background>
     <Window.DataContext>
         <vm:MainVM/>
     </Window.DataContext>
     <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup"/>
+        </VisualStateManager.VisualStateGroups>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="Auto" />
@@ -30,8 +37,24 @@
             </ListBox.ItemsPanel>
         </ListBox>
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="2">
-        <Button Content="Начать игру" Command="{Binding CommandStart}" />
-        <Button Content="Угодать букву" Command="{Binding CommandTry}" />
+            <TextBox Padding="5" FontSize="15" HorizontalAlignment="Center" Text="{Binding CountLetter}" MaxLength="2" />
+            <Button Content="Начать игру" Command="{Binding CommandStart}" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF6B9BE0"/>
+                        <GradientStop Color="#FFC9F589" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Угaдать букву" Command="{Binding CommandTry}" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF8EAFF5" Offset="0.351"/>
+                        <GradientStop Color="#FF013097" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
+        <TextBlock Text="{Binding  Message,  Mode=OneWay}" />
     </Grid>
 </Window>

@@ -24,5 +24,10 @@ namespace Висельница
         {
             InitializeComponent();
         }
+        private void TextBoxGotFocus(object sender, RoutedEventArgs e)
+        {
+            ((TextBox)sender).Text = null;
+        }
     }
+
 }
